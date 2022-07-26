@@ -1,6 +1,7 @@
 import { SearchIcon } from "@heroicons/react/solid"
 import { useRouter } from "next/router"
-import { FormEvent, useState } from "react"
+import { FormEvent, useEffect, useState } from "react"
+import { MdCatchingPokemon } from "react-icons/md"
 
 const SearchBar = () => {
   const [search, setSearch] = useState<string>("")

@@ -5,7 +5,7 @@ import { SearchBar } from "../components/SearchBar"
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-white-abstract bg-no-repeat bg-cover w-full min-h-screen flex items-center justify-center flex-col">
+    <div className="bg-white-abstract bg-no-repeat bg-cover w-full min-h-screen flex items-center justify-center flex-col p-8 md:p-0">
       <Head>
         <title>Freemon</title>
       </Head>
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <h3 className="text-2xl">ao</h3>
         <h1 className="text-red-500 text-6xl">Freemon</h1>
       </div>
-      <div className="w-full max-w-md mt-12">
+      <div className="w-full max-w-md mt-20 md:mt-12">
         <SearchBar />
       </div>
       <div className="w-full max-w-md mt-4">

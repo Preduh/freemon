@@ -11,11 +11,11 @@ function PokeInfosModal({ name }: PokeInfosModalProps) {
 
   return (
     <>
-      <div className="inset-0 flex items-center justify-center">
+      <div className="inset-0 flex items-center justify-center w-full">
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="cursor-pointer hover:-translate-y-2 transition-all active:scale-95 capitalize font-medium text-zinc-700 bg-zinc-200 hover:bg-gray-100 w-48 h-16 shadow-lg shadow-black/20 flex items-center justify-center rounded-lg px-2"
+          className="cursor-pointer hover:-translate-y-2 transition-all active:scale-95 capitalize font-medium text-zinc-700 bg-zinc-200 hover:bg-gray-100 w-full sm:w-64 md:w-40 xl:w-48 h-16 shadow-lg shadow-black/20 flex items-center justify-center rounded-lg px-2"
         >
           <MdCatchingPokemon className="text-red-500 w-5 h-5 mr-4" />
           {name}

@@ -37,13 +37,13 @@ const Pokedex = ({ data }: PokedexProps) => {
 
       <Header />
 
-      <div className="flex w-full justify-between min-h-[calc(100vh-4rem)] items-center">
+      <div className="flex flex-col md:flex-row w-full justify-between min-h-[calc(100vh-4rem)] items-center">
         <Link href={`/pokedex?page=${prev}`}>
-          <button>
+          <button className="hidden md:inline">
             <ChevronLeftIcon className="w-16 h-16 text-red-500 hover:text-red-600 active:scale-95" />
           </button>
         </Link>
-        <div className="grid grid-cols-5 gap-12 p-4">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 p-4">
           {data.results.map(({ name, url }) => {
             return (
               <div
@@ -56,10 +56,26 @@ const Pokedex = ({ data }: PokedexProps) => {
           })}
         </div>
         <Link href={`/pokedex?page=${next}`}>
-          <button>
+          <button className="hidden md:inline">
             <ChevronRightIcon className="w-16 h-16 text-red-500 hover:text-red-600 active:scale-95" />
           </button>
         </Link>
+        <div className="grid grid-cols-2 md:hidden w-full gap-12 p-4 my-4">
+          <Link href={`/pokedex?page=${prev}`}>
+            <div className="w-full h-full flex items-center justify-center">
+              <button className="bg-red-500 text-white w-64 h-12 rounded-md hover:bg-red-600 transition-colors font-medium">
+                Anterior
+              </button>
+            </div>
+          </Link>
+          <Link href={`/pokedex?page=${next}`}>
+            <div className="w-full h-full flex items-center justify-center">
+              <button className="bg-red-500 text-white w-64 h-12 rounded-md hover:bg-red-600 transition-colors font-medium">
+                Próximo
+              </button>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   )

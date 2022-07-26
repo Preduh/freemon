@@ -21,6 +21,8 @@ const Pokemon = (props: PokemonProps) => {
 
   const { search } = router.query
 
+  console.log(props)
+
   return (
     <div className="bg-white-abstract bg-no-repeat bg-cover w-full min-h-screen flex items-center flex-col">
       <Head>
